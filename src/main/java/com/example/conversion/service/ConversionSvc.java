@@ -39,7 +39,7 @@ public class ConversionSvc {
 		methodName.append(request.getInputUnit()).append("To").append(request.getTargetUnit());
 		Method method = cls.getDeclaredMethod("fahrenheitTorankine", Double.class);
 		Double val = (Double) method.invoke(tempConvertor, Double.parseDouble(request.getInputValue()));
-		System.out.println("here------ " + val);
+		System.out.println("----here------ " + val);
 		if (isEqual(val, Double.parseDouble(request.getStudentResponse()))) {
 			resp.setResult("Correct");
 		} else {
